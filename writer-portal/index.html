@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Writer Portal | The Research Desk</title>
+    <link rel="icon" type="image/png" href="https://theresearchdesks.com/TRD-icon.png">
+    <link rel="shortcut icon" type="image/png" href="https://theresearchdesks.com/TRD-icon.png">
+    <style>
+        :root { --bg-primary: #000000; --text-primary: #f5f5f7; }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: var(--bg-primary); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif; }
+        iframe { width: 100%; height: 100vh; border: none; display: block; opacity: 0; transition: opacity 0.8s ease; }
+        .home-exit-btn { position: fixed; top: 20px; left: 20px; z-index: 9999; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 40px; color: var(--text-primary); text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        .home-exit-btn:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+        .loader-container { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-primary); z-index: 10; transition: opacity 0.5s ease; }
+        .portal-loader { width: 40px; height: 40px; border: 2px solid rgba(255,255,255,0.1); border-top-color: var(--text-primary); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px; }
+        .loader-text { color: var(--text-primary); font-size: 14px; letter-spacing: 0.05em; font-weight: 500; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <a href="javascript:void(0)" onclick="window.top.location.href = 'https://theresearchdesks.com'" class="home-exit-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" /></svg>
+        Exit Portal
+    </a>
+    <div class="loader-container" id="loader">
+        <div class="portal-loader"></div>
+        <div class="loader-text">Loading Portal...</div>
+    </div>
+    <iframe id="portal-frame" src="https://script.google.com/macros/s/AKfycbxQT9A3BI2i2Ct9VyrQ9f4-ZgJ2-5a1lPXJu0bxR0twmCCsl3Wk0KD4G4GmWqjO1syL/exec" allow="camera; microphone; geolocation;" onload="document.getElementById('loader').style.opacity='0'; setTimeout(()=>document.getElementById('loader').style.display='none', 500); document.getElementById('portal-frame').style.opacity='1';"></iframe>
+</body>
+</html>

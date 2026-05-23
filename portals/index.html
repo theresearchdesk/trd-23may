@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portals | The Research Desk</title>
+    <meta name="description" content="Access the Client and Writer portals for The Research Desk.">
+    <link rel="icon" type="image/png" href="../TRD-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=SF+Pro+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=SF+Pro+Display:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../style.css?v=3.0">
+    <style>
+        .portals-hero { padding: 120px 0 60px; text-align: center; }
+        .portals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px; max-width: 900px; margin: 0 auto 120px; }
+        .portal-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); border-radius: 24px; padding: 48px 32px; text-align: center; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; backdrop-filter: blur(20px); }
+        .portal-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); opacity: 0; transition: opacity 0.4s; }
+        .portal-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); }
+        .portal-card:hover::before { opacity: 1; }
+        .portal-icon { width: 64px; height: 64px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-primary); border: 1px solid var(--glass-border); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .portal-card:hover .portal-icon { background: var(--text-primary); color: #000; transform: scale(1.05); }
+        .portal-title { font-size: 24px; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.01em; }
+        .portal-desc { color: var(--text-secondary); font-size: 15px; line-height: 1.6; margin-bottom: 32px; }
+        .portal-btn { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background: rgba(255, 255, 255, 0.05); color: var(--text-primary); border-radius: 40px; border: 1px solid var(--glass-border); font-weight: 500; font-size: 14px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; }
+        .portal-card:hover .portal-btn { background: var(--text-primary); color: #000; border-color: transparent; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); }
+    </style>
+</head>
+<body>
+    <header id="header" role="banner">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo">TRD | The Research Desk</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/assignment-help">Assignment Help</a></li>
+                    <li><a href="/technical-solutions">Tech Solutions</a></li>
+                    <li><a href="/earn-with-us">Earn With Us</a></li>
+                    <li><a href="/portals">Portals</a></li>
+                    <li><a href="/contact-us">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" role="button" tabindex="0" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</header>
+    <main id="main-content">
+        <section class="portals-hero">
+            <div class="container">
+                <p class="hero-eyebrow">Secure Access</p>
+                <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 56px);">Core Portals</h1>
+                <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">Select your portal to log in. Whether you're managing projects or writing them, everything you need is right here.</p>
+            </div>
+        </section>
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="portals-grid">
+                    <a href="/client-portal" class="portal-card">
+                        <div class="portal-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                        </div>
+                        <h2 class="portal-title">Client Portal</h2>
+                        <p class="portal-desc">Track your projects and interact directly with our team.</p>
+                        <span class="portal-btn">Access Client Portal</span>
+                    </a>
+                    <a href="/writer-portal" class="portal-card">
+                        <div class="portal-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.89 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.89l12.683-12.683z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 7.125L16.875 4.5" /></svg>
+                        </div>
+                        <h2 class="portal-title">Writer Portal</h2>
+                        <p class="portal-desc">Manage your assignments, track earnings, and collaborate with the review team.</p>
+                        <span class="portal-btn">Access Writer Portal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../script.js?v=3.0" defer></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('../components/footer.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

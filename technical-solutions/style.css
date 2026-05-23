@@ -1,0 +1,106 @@
+@import url("../style.css?v=3.0");
+
+/* ═══ Page-Specific Elements ═══ */
+
+/* Card tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Tagline block */
+.tagline-block {
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.tagline-block h2 {
+    font-size: clamp(36px, 6vw, 80px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+}
+
+.tagline-block p {
+    color: var(--text-tertiary);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Process steps */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.process-step {
+    padding: 48px 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-step:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.process-step-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+
+.process-step-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.process-step-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Responsive Overrides */
+@media (max-width: 968px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

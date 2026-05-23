@@ -1,0 +1,89 @@
+@import url("../style.css?v=3.0");
+
+/* ═══ Page-Specific Elements ═══ */
+
+/* No-AI badge */
+.ai-badge {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 12px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+/* Trust Pillars */
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 120px;
+}
+
+.trust-card {
+    padding: 56px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trust-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.trust-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.trust-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.trust-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Subjects List */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 968px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

@@ -1,0 +1,179 @@
+@import url("../style.css?v=3.0");
+
+/* ═══ Page-Specific Elements ═══ */
+
+/* Big CTA Box */
+.big-cta-box {
+    padding: 100px 60px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    margin-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.big-cta-box::before {
+    content: '7';
+    position: absolute;
+    font-size: 400px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.015);
+    font-family: 'JetBrains Mono', monospace;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    line-height: 1;
+}
+
+.big-cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.big-cta-title {
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.big-cta-title strong {
+    font-weight: 800;
+}
+
+.big-cta-subtitle {
+    color: var(--text-secondary);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 48px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Process Steps */
+.process-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.process-step {
+    padding: 56px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-step:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.process-step-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+}
+
+.process-step-arrow {
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+}
+
+.process-step-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.process-step-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Perks Grid */
+.perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+}
+
+.perk-card {
+    padding: 48px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.perk-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.perk-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.perk-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.perk-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Responsive Overrides */
+@media (max-width: 968px) {
+    .process-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .big-cta-box {
+        padding: 60px 32px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .process-step,
+    .perk-card {
+        padding: 40px 28px;
+    }
+}
